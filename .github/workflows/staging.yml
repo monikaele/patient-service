@@ -1,0 +1,22 @@
+name: CI on Staging Branch
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo "This workflow runs on push to staging for patient service!"
+
+      - name: Run a multi-line script
+        run: |
+          echo "Performing some build steps..."
+          echo "This is a second line."
