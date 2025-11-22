@@ -3,7 +3,7 @@ name: CI on Master Branch for Patient Service
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
